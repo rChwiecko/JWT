@@ -3,17 +3,6 @@ const jwt = require('jsonwebtoken')
 const app = express()
 require('dotenv').config()
 app.use(express.json())
-const posts = [
-    {
-        username: 'Ryan',
-        title: 'Post 1'
-    },
-    {
-        username: 'hey',
-        title: 'Post 2'
-    },
-]
-
 
 app.get('/posts', authenticateToken, (req, res) =>{
     
